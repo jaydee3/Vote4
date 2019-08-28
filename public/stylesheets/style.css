@@ -1,0 +1,61 @@
+
+body{
+  background: #fff;
+}
+
+.title{
+  margin:1em;
+  margin-top:2em;
+}
+
+.main {
+  width:90%;
+  margin:1em;
+}
+
+.box {
+  transition: box-shadow .3s;
+  width: 20em;
+  height: auto;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+.box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.boxcontainer{
+  text-align: center;
+}
+
+.innerbox {
+  width: 290px;
+  display: inline-block;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right:0.5em;
+  float: left;
+}
+
+.name {
+  margin-top: 1em;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  float: left;
+}
+
+.matchPercent {
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  float: left;
+}
