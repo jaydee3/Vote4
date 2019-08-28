@@ -1,0 +1,49 @@
+const express = require('express');
+const router = express.Router();
+const userAcct = require('../controllers/userAccount.js');
+
+/*Get the new user page*/
+/*router.get('/',function(req,res,next){
+    res.render('survey');
+})*/
+
+router.post('/', function(req, res, next){
+      surveyInstance.getQuestion(, (err, result) => {
+        if (!result[0]) {
+          const feedback = 'Something seems to have gone wrong.';
+          res.render('survey', {
+            session: req.session,
+            feedback: feedback,
+          });
+        } else {
+          req.session.cookie.maxAge = 24 * 60 * 60 * 1000;
+          req.session.user = result[0];
+          res.render('survey');
+        }
+      });
+ 
+
+})
+
+module.exports = router;
+
+
+
+
+
+/*router.get('/', function(req, res){
+        var callbackCount = 0;
+        var context = {};
+        var mysql = req.app.get('mysql');
+        getQuestion(res, mysql, context, complete);
+        function complete(){
+            callbackCount++;
+            if(callbackCount >= 1){
+                res.render('survey', context);
+            }
+
+        }
+    });
+
+    return router;
+}();*/

@@ -1,0 +1,40 @@
+{{>navbar pageTitle="Candidate Matches"}}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidate Matches</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<div class="container-fluid">
+	<div class = "row justify-content-center mx-auto">
+		<h1>Your Matches</h1>
+		<div class = "main">
+			<div class="row mx-auto"> 
+				<div class="row align-center mx-auto">
+					<h3>{{office.title}}</h3>
+				</div>
+				<div class="row align-center mx-auto">
+					{{#each candidate}}
+						<div class="boxcontainer">
+							<div class="box">
+								{{#if picture}}
+									<div class= "mx-auto">
+										<img src="/images/{{picture}}" alt="Match 1" style="width:100px;height:100px;">
+									</div>
+								{{/if}}
+								<div class="mx-auto">
+									<h5>{{name}}</h5>
+								</div>
+								<div class="mx-auto">
+									<h4>{{score}}%</h4>
+								</div>
+							</div>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

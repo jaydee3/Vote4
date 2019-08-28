@@ -1,0 +1,14 @@
+var mysql = require('../dbcon.js')
+
+
+exports.getQuestion=(context, callback) => {
+  mysql.pool.query(`
+  SELECT qId, question FROM question
+  `, (err, rows) => {
+        if (err) {
+                callback(err, null);
+                return;
+      }
+      callback(null, rows);
+  });
+};

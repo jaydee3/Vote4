@@ -1,0 +1,118 @@
+{{!-- {{Title}} --}}
+{{>navbar pageTitle="Vote4" isHome=true}}
+
+<div class="container">
+
+    <div class= "m-3" style="background-color: #ffffff;">
+
+        {{!-- {{Border - not completed}} --}}
+        <div class= "pt-4 pb-6 px-5 m-1" style="background-color: #ffffff;">
+       
+                {{!-- {{row 1}} --}}
+                <div class="row mt-5"> 
+
+
+                    {{!-- {{row 1 column 1}} --}}
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="p-4" style="height: 180px; background-color: #b60000;">
+                                    <h5 class="card-title" style="text-align:center; color: white;">Log In/Sign Up</h5>
+                                        <div style="text-align:center; color: white;">
+                                            <p font-size: "2">Welcome!</p>
+                                                <div style="text-align:center; color: white;">
+                                            
+                                                    {{#if session.user}}
+                                                        <p class="card-text"></p>
+                                                        <a href="/logout" class="btn btn-light">Log out</a>
+                                                    {{else}}
+                                                        <p class="card-text"></p>
+                                                        <a href="/login" class="btn btn-light">Log in</a>
+                                                        <a href="/newUser" class="btn btn-light">Sign up</a>
+                                                    {{/if}}
+
+                                                </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    {{!-- {{row 1 column 2}} --}}
+                    <div class="col m-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="p-4" style="height: 180px; background-color: #009900;">
+                                    <h5 class="card-title" style="text-align:center; color: white;">View Profile</h5>
+                                        <div style="text-align:center; color: white;">
+                                            
+                                                <div style="text-align:center; color: white;">
+
+                                                    {{#if session.user}}
+                                                        <p class="card-text"></p>
+                                                        <a href="/profile" class="btn btn-light">Profile</a>
+                                                    {{else}}
+                                                        <p class="card-text"></p>
+                                                        <p font-size: "2">Must be loggin in</p>
+                                                    {{/if}}
+
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    {{!-- {{row 1 column 3}} --}}
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="p-4" style="height: 180px; background-color: #110099;">
+                                    <h5 class="card-title" style="text-align:center; color: white;">Browse</h5>
+                                        <div style="text-align:center; color: white;">
+                                            <p font-size: "2"></p>
+                                                <div style="text-align:center; color: white;">
+
+                                                    {{#if session.user}}
+                                                        <p class="card-text">Matched Candidates</p>
+                                                        <a href="/match" class="btn btn-light">View</a>
+                                                    {{else}}
+                                                        <p class="card-text"> View Matched Candidates</p>
+                                                        <p> (log in to view) </p> 
+                                                        
+                                                    {{/if}}
+
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+            {{!-- {{row 2}} --}}
+            <div class="row">
+
+              
+
+            </div>
+
+        {{!-- {{End Border}} --}}
+        </div>
+
+    {{!-- {{End Background Color}} --}}
+    </div>
+
+{{!-- {{End Outermost Container}} --}}
+</div>
+
+{{feedback}}
+
+
+
+
+
